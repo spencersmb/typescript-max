@@ -23,4 +23,3 @@ console.log(result1, result2, result3);
 var scientist = { firstName: "Will", experience: 12 };
 var firstName = scientist.firstName, experience = scientist.experience;
 console.log(firstName, experience);
-//# sourceMappingURL=section-4-49.js.map

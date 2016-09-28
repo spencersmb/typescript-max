@@ -3,9 +3,17 @@
         "module": "commonjs",
         "target": "es5",
         "noImplicitAny": false,
-        "sourceMap": true
+        "sourceMap": true,
+        "noUnusedParameters": true,
+        "strictNullChecks": true
 //        "outFile": "script.js" // compile everything into one file
     },
+    "files": [
+      "app.ts",
+        "script.ts",
+        "classes.ts",
+        "typings/index.d.ts"
+    ],
     "exclude": [
         "node_modules"
     ]

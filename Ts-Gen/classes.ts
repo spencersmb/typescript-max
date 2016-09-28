@@ -30,7 +30,7 @@ class Spencer extends Person {
 }
 
 const spencer = new Spencer("Spencer");
-console.log(spencer);
+// console.log(spencer);
 
 //Getters and setters
 class Plant {
@@ -56,9 +56,9 @@ class Plant {
 }
 
 let plant = new Plant();
-console.log(plant.species);
+// console.log(plant.species);
 plant.species = "Fern";
-console.log(plant.species);
+// console.log(plant.species);
 
 ///Static methods and Properties
 class Helpers {
@@ -67,3 +67,25 @@ class Helpers {
         return this.PI * diameter;
     }
 }
+
+class OnlyOne {
+    private static instance: OnlyOne;
+    public readonly name: string; //read only property
+
+    private constructor( name: string ){
+        this.name = name;
+    }
+
+    static getInstance(){
+
+        //check if the instance has been instantiated so it only creates one of itself
+        if( !OnlyOne.instance ){
+            OnlyOne.instance = new OnlyOne('The only one');
+        }
+
+        return OnlyOne.instance;
+    }
+}
+
+let right = OnlyOne.getInstance();
+// console.log(right);

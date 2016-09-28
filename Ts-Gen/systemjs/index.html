@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Typscript</title>
+    <!--<script type="text/javascript" src="app.js"></script>-->
+    <script type="text/javascript" src="script.js"></script>
+    <!--<script type="text/javascript" src="section-4-49.js"></script>-->
+    <script type="text/javascript" src="classes.js"></script>
+    <!--<script type="text/javascript" src="section-5-61.js"></script>-->
+    <!-- to use namespaces - must compile all files into one due to importing -->
+    <!--<script type="text/javascript" src="namespaces.js"></script>-->
+    <!--<script type="text/javascript" src="modules.js"></script>-->
+
+
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script>
+        //set base URL
+        SystemJS.config({
+            baseURL: '/',
+            defaultJSExtensions: true,
+            map:{
+                "jQuery": "node_modules/jquery/dist/jquery.min.js"
+            }
+        });
+
+        //load /js/main.js
+        SystemJS.import('app.js');
+    </script>
+</head>
+<body>
+Typescript 2
+</body>
+</html>

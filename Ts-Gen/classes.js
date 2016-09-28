@@ -29,7 +29,7 @@ var Spencer = (function (_super) {
     return Spencer;
 }(Person));
 var spencer = new Spencer("Spencer");
-console.log(spencer);
+// console.log(spencer);
 //Getters and setters
 var Plant = (function () {
     function Plant() {
@@ -53,9 +53,9 @@ var Plant = (function () {
     return Plant;
 }());
 var plant = new Plant();
-console.log(plant.species);
+// console.log(plant.species);
 plant.species = "Fern";
-console.log(plant.species);
+// console.log(plant.species);
 ///Static methods and Properties
 var Helpers = (function () {
     function Helpers() {
@@ -66,4 +66,19 @@ var Helpers = (function () {
     Helpers.PI = 3.14;
     return Helpers;
 }());
+var OnlyOne = (function () {
+    function OnlyOne(name) {
+        this.name = name;
+    }
+    OnlyOne.getInstance = function () {
+        //check if the instance has been instantiated so it only creates one of itself
+        if (!OnlyOne.instance) {
+            OnlyOne.instance = new OnlyOne('The only one');
+        }
+        return OnlyOne.instance;
+    };
+    return OnlyOne;
+}());
+var right = OnlyOne.getInstance();
+console.log(right);
 //# sourceMappingURL=classes.js.map

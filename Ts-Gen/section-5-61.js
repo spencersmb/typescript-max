@@ -72,4 +72,3 @@ myPerson.firstName = "Ma";
 console.log(myPerson.firstName);
 myPerson.firstName = "Maximilian";
 console.log(myPerson.firstName);
-//# sourceMappingURL=section-5-61.js.map
